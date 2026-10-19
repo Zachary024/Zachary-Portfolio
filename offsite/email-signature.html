@@ -1,0 +1,82 @@
+<!doctype html>
+<!--
+  HTML email signature.
+  ----------------------------------------------------------------------------
+  HOW TO USE
+  1. Open this file in a browser.
+  2. Select everything inside <div class="signature"> from the rendered page
+     (not from the source), copy it.
+  3. Paste into your email client's signature editor:
+       Gmail      Settings → General → Signature → Create new
+       Outlook    File → Options → Mail → Signatures
+       Apple Mail Mail → Settings → Signatures, then paste as-is
+  4. Change the URL to your live domain and update the phone if it changes.
+
+  Design notes
+  - Table-free, single column, 560 px max — survives most clients.
+  - Inline styles only: Gmail strips <style> blocks in signatures.
+  - The logo is a hosted <img>, so the file must be online to display:
+    upload assets/img/logo-mark.png to your domain and use its absolute URL.
+  - No web font: system-ui keeps it consistent, since most clients block fonts.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Email signature</title>
+  </head>
+  <body style="margin:0;padding:24px;background:#f4f6fa">
+    <div
+      class="signature"
+      style="max-width:560px;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#1a2230;font-size:14px;line-height:1.5"
+    >
+      <table
+        role="presentation"
+        cellpadding="0"
+        cellspacing="0"
+        border="0"
+        style="border-collapse:collapse"
+      >
+        <tr>
+          <td style="padding:0 18px 0 0;vertical-align:top">
+            <img
+              src="https://yourdomain.com/assets/img/logo-mark.png"
+              alt="Zachary Programming"
+              width="44"
+              height="44"
+              style="display:block;border:0;width:44px;height:44px"
+            />
+          </td>
+          <td style="vertical-align:top">
+            <div
+              style="font-size:15px;font-weight:600;letter-spacing:0.01em;color:#0f1622"
+            >
+              Zachary
+            </div>
+            <div
+              style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#6b7789;padding-top:2px"
+            >
+              Full-stack developer
+            </div>
+            <div
+              style="height:1px;background:#dde2ea;margin:10px 0 10px;width:220px"
+            ></div>
+            <div style="font-size:13px;color:#3a4657">
+              <a
+                href="mailto:xharkrii024@gmail.com"
+                style="color:#2f5fe0;text-decoration:none"
+                >xharkrii024@gmail.com</a
+              >
+              &nbsp;·&nbsp; +234 911 230 4635<br />
+              <a
+                href="https://yourdomain.com"
+                style="color:#2f5fe0;text-decoration:none"
+                >yourdomain.com</a
+              >
+              &nbsp;·&nbsp; Lagos, Nigeria
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,291 @@
+<!doctype html>
+<!--
+  One-page rate card. Written to be sent as a PDF attachment or printed.
+  Render with tools/make-offsite-kit.py → rate-card.pdf.
+  A4, 210 × 297 mm, no bleed.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rate card</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 210mm;
+        height: 297mm;
+        padding: 14mm 16mm 10mm;
+        background: #fff;
+        color: #16202f;
+        font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 10.5pt;
+        line-height: 1.55;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+        padding-bottom: 8mm;
+        border-bottom: 2px solid #16202f;
+      }
+
+      .lockup {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .lockup img {
+        width: 46px;
+        height: 46px;
+      }
+
+      .lockup h1 {
+        font-size: 20pt;
+        letter-spacing: -0.01em;
+        line-height: 1;
+      }
+
+      .lockup p {
+        font-size: 8.5pt;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #6b7789;
+        margin-top: 4px;
+      }
+
+      .contact {
+        text-align: right;
+        font-size: 9pt;
+        color: #4a576b;
+        line-height: 1.7;
+      }
+
+      h2 {
+        font-size: 8.5pt;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #6b7789;
+        margin: 6.5mm 0 3mm;
+        padding-bottom: 2mm;
+        border-bottom: 1px solid #dde2ea;
+      }
+
+      .intro {
+        color: #354154;
+        max-width: 150mm;
+        margin-top: 5mm;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th {
+        text-align: left;
+        font-size: 8pt;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #6b7789;
+        font-weight: 500;
+        padding: 0 0 2.5mm;
+        border-bottom: 1px solid #dde2ea;
+      }
+
+      td {
+        padding: 2.8mm 0;
+        border-bottom: 1px solid #eef1f6;
+        vertical-align: top;
+        color: #354154;
+        font-size: 9.5pt;
+      }
+
+      td:first-child {
+        width: 42mm;
+        font-weight: 600;
+        color: #16202f;
+      }
+
+      td:last-child {
+        width: 34mm;
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+        color: #16202f;
+      }
+
+      .muted {
+        color: #6b7789;
+      }
+
+      .pricing-note {
+        margin-top: 5mm;
+        padding: 4mm 5mm;
+        border-left: 2px solid #2f5fe0;
+        background: #f6f8fc;
+        color: #354154;
+        font-size: 9.5pt;
+      }
+
+      .cols {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12mm;
+      }
+
+      .cols p {
+        color: #354154;
+        font-size: 9.5pt;
+      }
+
+      .cols strong {
+        display: block;
+        margin-bottom: 1mm;
+        font-size: 10.5pt;
+        color: #16202f;
+      }
+
+      footer {
+        margin-top: auto;
+        padding-top: 6mm;
+        border-top: 1px solid #dde2ea;
+        display: flex;
+        justify-content: space-between;
+        font-size: 8pt;
+        color: #6b7789;
+      }
+
+      .accent {
+        color: #2f5fe0;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="lockup">
+        <img src="../assets/img/logo-mark.png" alt="" />
+        <div>
+          <h1>ZACHARY</h1>
+          <p>Programming</p>
+        </div>
+      </div>
+      <div class="contact">
+        xharkrii024@gmail.com<br />
+        +234 911 230 4635<br />
+        Lagos, Nigeria
+      </div>
+    </header>
+
+    <p class="intro">
+      Websites, web applications and dashboards, designed and built end to end.
+      Every project is scoped in writing before it starts, quoted at a fixed
+      price for that scope, and delivered with the code and accounts in your
+      name.
+    </p>
+
+    <h2>Engagements</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Package</th>
+          <th>What is included</th>
+          <th>Timeline</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Marketing site</td>
+          <td>
+            Up to five pages, design and build, copy layout, contact forms,
+            analytics and SEO basics.
+          </td>
+          <td>3–4 weeks</td>
+        </tr>
+        <tr>
+          <td>Web app</td>
+          <td>
+            Product interface, accounts, database, API, payments where needed.
+          </td>
+          <td>5–8 weeks</td>
+        </tr>
+        <tr>
+          <td>Dashboard</td>
+          <td>
+            Data ingestion from up to three sources, reporting screens, CSV
+            export, role-based access.
+          </td>
+          <td>5–7 weeks</td>
+        </tr>
+        <tr>
+          <td>Ongoing work</td>
+          <td>
+            A reserved block of hours each month for fixes, new pages and
+            improvements. No long contract.
+          </td>
+          <td>Rolling monthly</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="pricing-note">
+      <span class="accent">Pricing.</span> Every project is quoted at a fixed
+      price for a written scope — not an hourly rate. Send the brief and you
+      will have a number, a timeline and the exclusions in two working days.
+    </p>
+
+    <h2>Terms</h2>
+    <div class="cols">
+      <p>
+        <strong>50% to start, 50% at launch</strong>
+        Half secures the slot and begins the work; the second half is due on
+        launch, after you have seen the build running. Larger builds are split
+        into three milestone payments.
+      </p>
+      <p>
+        <strong>What you get</strong>
+        Design files, the repository, and every account created for the project,
+        in your name. Thirty days of fixes after launch, and a walkthrough of how
+        to edit the site.
+      </p>
+    </div>
+
+    <h2>Process</h2>
+    <div class="cols">
+      <p>
+        <strong>1 — Brief</strong>
+        A link, a document, or three sentences about what you need.
+      </p>
+      <p>
+        <strong>2 — Scope and quote</strong>
+        A written scope, timeline and fixed price within two working days.
+      </p>
+      <p>
+        <strong>3 — Design and build</strong>
+        A working link you can open every week. Progress as it is built.
+      </p>
+      <p>
+        <strong>4 — Launch and hand-off</strong>
+        Deploy, domain, walkthrough, and thirty days of fixes.
+      </p>
+    </div>
+
+    <footer>
+      <span>Zachary Programming · Lagos, Nigeria</span>
+      <span>Rates quoted per project · Valid 2026</span>
+    </footer>
+  </body>
+</html>

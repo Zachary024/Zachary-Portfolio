@@ -1,0 +1,597 @@
+<!doctype html>
+<!--
+  ============================================================================
+  hire.html — "Work with me"
+  A decision page, not a second contact page: what an engagement looks like,
+  what it costs, how long it takes, and what happens after launch. The form
+  itself stays on index.html#contact so there is one place to convert.
+  Shares assets/styles.css (§16 has the page-specific rules).
+  ============================================================================
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Work with Zachary — a full-stack developer in Lagos building websites, web apps and dashboards. How engagements work, what they cost, and how to start."
+    />
+    <meta name="theme-color" content="#0B0D12" />
+
+    <script>
+      // Enables the scroll-reveal styles. Without JS, nothing is hidden.
+      document.documentElement.classList.add("js");
+    </script>
+
+    <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" />
+    <link rel="icon" href="assets/img/favicon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zachary Programming" />
+    <meta property="og:title" content="Hire Zachary — full-stack developer" />
+    <meta
+      property="og:description"
+      content="Websites, web apps and dashboards, built end to end. How engagements work, what they cost and how to start."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Rich results: services offered + the FAQ answers on this page.
+         Update the url to your live domain before launch. -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "name": "Zachary Programming",
+      "description": "Full-stack development and interface design: websites, web apps and dashboards, built end to end.",
+      "url": "https://example.com/hire.html",
+      "email": "xharkrii024@gmail.com",
+      "telephone": "+2349112304635",
+      "areaServed": "Worldwide",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lagos",
+        "addressCountry": "NG"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Zachary",
+        "jobTitle": "Full-Stack Developer & Interface Designer"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Engagements",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Marketing site",
+              "description": "Up to five pages, design and build, copy layout, contact forms, analytics and SEO basics."
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "GBP",
+              "description": "Quoted per project. Typical timeline: 3-4 weeks."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web app or dashboard",
+              "description": "Product interface, accounts, database, API and payments, built on a stack another developer can pick up."
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "GBP",
+              "description": "Quoted per project. Typical timeline: 5-8 weeks."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ongoing work",
+              "description": "A reserved block of time each month for fixes, new pages and improvements. No long contract."
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "GBP",
+              "description": "Quoted per project. Typical timeline: Monthly."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a project cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every project is quoted per scope. A marketing site and a multi-role dashboard are different jobs, and a fixed price for a defined scope is more honest than an hourly rate that grows. As a shape rather than a promise: a five-page site is a four-figure sum in GBP, a dashboard with accounts and live data is five figures. Send the brief and you get a real number in two working days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A landing page or small site is usually a week or two. A web app or dashboard runs four to eight weeks depending on how many screens and integrations it needs. The quote includes the timeline, and I tell you early if it slips."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with clients outside Nigeria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — most of my work is remote. I overlap with West Africa (WAT) and keep flexible hours for calls with Europe and North America, and everything else runs asynchronously in writing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do you need from me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three things: the content or the raw material for it, access to the accounts the site will live in, and one person who can make decisions. Everything else — structure, design, build, deployment — is my job."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after launch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You get 30 days of fixes for anything I broke, a walkthrough of how to edit the site, and the code in a repository you own. If you want ongoing changes, that is the monthly option above."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I own the code?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. On final payment the code, the design files and the accounts are handed over and are yours to keep, change or give to another developer."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+
+    <link
+      rel="preload"
+      href="assets/fonts/inter-latin-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/remix-subset.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="assets/icon-font.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <title>Hire a developer — Zachary Programming</title>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header" id="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html" aria-label="Zachary Programming — home">
+          <img
+            class="brand__mark"
+            src="assets/img/logo-mark.png"
+            alt=""
+            width="32"
+            height="32"
+            fetchpriority="high"
+          />
+          <span class="brand__text">
+            <span class="brand__name">Zachary</span>
+            <span class="brand__sub">Programming</span>
+          </span>
+        </a>
+
+        <div class="page-header__links">
+          <a class="page-header__back" href="index.html">
+            <i class="ri-arrow-left-line" aria-hidden="true"></i>
+            Back to portfolio
+          </a>
+          <a class="btn btn--primary btn--sm" href="index.html#contact">
+            Start a project
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ==================== INTRO ==================== -->
+      <section class="page-hero">
+        <div class="container">
+          <div class="page-hero__inner">
+            <p class="status">
+              <span class="status__dot" aria-hidden="true"></span>
+              Available for new projects
+            </p>
+
+            <h1 class="page-hero__title page-hero__title--tight">
+              Hire a developer who ships.
+            </h1>
+
+            <p class="page-hero__lead">
+              I take on a small number of projects at a time — marketing sites,
+              web apps and dashboards. You work directly with me from the first
+              call to the deploy: no account manager, no hand-off.
+            </p>
+
+            <div class="page-hero__actions">
+              <a class="btn btn--primary" href="index.html#contact">
+                Start a project
+                <i class="ri-arrow-right-line" aria-hidden="true"></i>
+              </a>
+              <a class="btn btn--ghost" href="index.html#work">See the work</a>
+            </div>
+
+            <dl class="page-hero__meta">
+              <div>
+                <dt>Engagements</dt>
+                <dd>Project-based, quoted per scope</dd>
+              </div>
+              <div>
+                <dt>Based in</dt>
+                <dd>Lagos, NG · remote worldwide</dd>
+              </div>
+              <div>
+                <dt>Reply time</dt>
+                <dd>Within one working day</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== PROCESS ==================== -->
+      <section class="section" id="process">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <div>
+              <p class="eyebrow">Process</p>
+              <h2 class="section__title">How it works</h2>
+            </div>
+            <p class="section__lead">
+              Four steps, no surprises. You always know what is happening and
+              what comes next.
+            </p>
+          </header>
+
+          <ol class="steps">
+            <li class="step" data-reveal>
+              <span class="step__num" aria-hidden="true">01</span>
+              <h3 class="step__title">Send the brief</h3>
+              <p class="step__text">
+                Use the form on the portfolio, or email me directly. A rough
+                idea is enough — a link, a document, or three sentences about
+                what you need.
+              </p>
+            </li>
+
+            <li class="step" data-reveal>
+              <span class="step__num" aria-hidden="true">02</span>
+              <h3 class="step__title">Scope and quote</h3>
+              <p class="step__text">
+                Within two working days you get a written scope: what is
+                included, what is not, the timeline, and a fixed price for that
+                scope.
+              </p>
+            </li>
+
+            <li class="step" data-reveal>
+              <span class="step__num" aria-hidden="true">03</span>
+              <h3 class="step__title">Design and build</h3>
+              <p class="step__text">
+                I design in the browser and in Figma as needed, and send a
+                working link you can open every week. You see progress as it is
+                built, not a big reveal at the end.
+              </p>
+            </li>
+
+            <li class="step" data-reveal>
+              <span class="step__num" aria-hidden="true">04</span>
+              <h3 class="step__title">Launch and hand-off</h3>
+              <p class="step__text">
+                Deploy, connect the domain, and walk you through editing it.
+                The code and accounts are yours, and I fix anything I broke for
+                30 days after launch.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ==================== ENGAGEMENTS ==================== -->
+      <section class="section" id="engagements">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <div>
+              <p class="eyebrow">Engagements</p>
+              <h2 class="section__title">Three ways to work together</h2>
+            </div>
+            <p class="section__lead">
+              Each one is quoted per project, so you know the number before
+              anything starts.
+            </p>
+          </header>
+
+          <div class="service-grid">
+            <article class="service" data-reveal>
+              <span class="service__icon" aria-hidden="true">
+                <i class="ri-layout-4-line"></i>
+              </span>
+              <h3 class="service__title">Marketing site</h3>
+              <p class="service__text">
+                A site that explains what you do and makes the next step
+                obvious — usually five pages or fewer, written around your
+                actual offer.
+              </p>
+              <ul class="service__list">
+                <li>Design and build</li>
+                <li>Copy and layout</li>
+                <li>Forms, analytics, SEO basics</li>
+              </ul>
+            </article>
+
+            <article class="service" data-reveal>
+              <span class="service__icon" aria-hidden="true">
+                <i class="ri-code-s-slash-line"></i>
+              </span>
+              <h3 class="service__title">Web app or dashboard</h3>
+              <p class="service__text">
+                A working product interface — accounts, data, payments — built
+                on a stack that another developer can pick up later.
+              </p>
+              <ul class="service__list">
+                <li>React / Next.js or plain JS</li>
+                <li>Node.js or Python API</li>
+                <li>Database and auth</li>
+              </ul>
+            </article>
+
+            <article class="service" data-reveal>
+              <span class="service__icon" aria-hidden="true">
+                <i class="ri-device-line"></i>
+              </span>
+              <h3 class="service__title">Ongoing work</h3>
+              <p class="service__text">
+                A monthly block of time for fixes, new pages and improvements,
+                for sites that are already live and need to keep moving.
+              </p>
+              <ul class="service__list">
+                <li>Reserved time each month</li>
+                <li>Same-week turnaround</li>
+                <li>No long contract</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TESTIMONIAL ====================
+           HOW THIS SECTION WORKS
+           It is plain HTML — no JavaScript, no CMS. One <figure class="quote">
+           per testimonial:
+             blockquote > p.quote__text   the quote itself, in the client's words
+             figcaption > .quote__name    their name
+                        > .quote__role    their role and company
+                        > .quote__link    optional link to the case study
+
+           To add a second quote, copy the whole <figure> and paste it after the
+           first one inside .quotes — the row becomes two columns at 900px.
+           To remove the section entirely, delete this <section>.
+
+           Only publish a quote you have in writing, and keep it as they said
+           it (light trimming for length is fine; rewriting is not). -->
+      <section class="section" id="word">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <div>
+              <p class="eyebrow">In their words</p>
+              <h2 class="section__title">What clients say</h2>
+            </div>
+            <p class="section__lead">
+              One quote, from a project on this site — not a wall of logos.
+            </p>
+          </header>
+
+          <div class="quotes">
+            <figure class="quote" data-reveal>
+              <blockquote>
+                <p class="quote__text">
+                  Placeholder quote — replace this with what the client actually
+                  said, in their words and their tone. One sentence about the
+                  problem and one about the working relationship is plenty.
+                </p>
+              </blockquote>
+              <figcaption class="quote__cite">
+                <span class="quote__name">Client name</span>
+                <span class="quote__role">Owner, Àura Dining</span>
+                <a class="quote__link" href="work/restaurant-website.html">
+                  Read the Restaurant Website case study
+                  <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                </a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TERMS ==================== -->
+      <section class="section" id="terms">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <div>
+              <p class="eyebrow">Terms</p>
+              <h2 class="section__title">Payments, plainly</h2>
+            </div>
+            <p class="section__lead">
+              The thing most people want to ask but do not. Here it is without a
+              call.
+            </p>
+          </header>
+
+          <div class="terms">
+            <div class="terms__item" data-reveal>
+              <h3>50% to start, 50% at launch</h3>
+              <p>
+                Half secures the slot in the schedule and starts the work. The
+                second half is due on launch, after you have seen the build
+                running. Larger builds are split into three milestone payments
+                tied to those milestones, not to the calendar.
+              </p>
+            </div>
+
+            <div class="terms__item" data-reveal>
+              <h3>Bank transfer or card, in GBP or NGN</h3>
+              <p>
+                Invoices are issued before each payment with the scope and the
+                amount on them. International clients pay by card or transfer;
+                Nigerian clients by transfer. No hidden fees are added to the
+                price that was quoted.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== FAQ ==================== -->
+      <section class="section" id="questions">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <div>
+              <p class="eyebrow">Questions</p>
+              <h2 class="section__title">The usual ones</h2>
+            </div>
+            <p class="section__lead">
+              If yours is not here, ask it in the form — I answer every message.
+            </p>
+          </header>
+
+          <div class="faq">
+            <details class="faq__item" open>
+              <summary class="faq__q">How much does a project cost?</summary>
+              <p class="faq__a">
+                Every project is quoted per scope. A marketing site and a
+                multi-role dashboard are different jobs, and a fixed price for
+                a defined scope is more honest than an hourly rate that grows.
+                As a shape rather than a promise: a five-page site is a
+                four-figure sum in GBP, a dashboard with accounts and live data
+                is five figures. Send the brief and you get a real number in
+                two working days.
+              </p>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">How long does it take?</summary>
+              <p class="faq__a">
+                A landing page or small site is usually a week or two. A web
+                app or dashboard runs four to eight weeks depending on how many
+                screens and integrations it needs. The quote includes the
+                timeline, and I tell you early if it slips.
+              </p>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">Do you work with clients outside Nigeria?</summary>
+              <p class="faq__a">
+                Yes — most of my work is remote. I overlap with West Africa
+                (WAT) and keep flexible hours for calls with Europe and North
+                America, and everything else runs asynchronously in writing.
+              </p>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">What do you need from me?</summary>
+              <p class="faq__a">
+                Three things: the content or the raw material for it, access to
+                the accounts the site will live in, and one person who can make
+                decisions. Everything else — structure, design, build,
+                deployment — is my job.
+              </p>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">What happens after launch?</summary>
+              <p class="faq__a">
+                You get 30 days of fixes for anything I broke, a walkthrough of
+                how to edit the site, and the code in a repository you own. If
+                you want ongoing changes, that is the monthly option above.
+              </p>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">Will I own the code?</summary>
+              <p class="faq__a">
+                Yes. On final payment the code, the design files and the
+                accounts are handed over and are yours to keep, change or give
+                to another developer.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CLOSING ==================== -->
+      <section class="section">
+        <div class="container">
+          <div class="cta-band" data-reveal>
+            <div>
+              <h2 class="cta-band__title">Have something in mind?</h2>
+              <p class="cta-band__text">
+                Tell me what you are building and I will reply within one
+                working day with next steps — scope, timeline and cost.
+              </p>
+            </div>
+            <div class="cta-band__actions">
+              <a class="btn btn--primary" href="index.html#contact">
+                Send a message
+                <i class="ri-arrow-right-line" aria-hidden="true"></i>
+              </a>
+              <a class="btn btn--ghost" href="mailto:xharkrii024@gmail.com">
+                Email instead
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__bottom">
+          <p>© <span id="year">2026</span> Zachary Programming. All rights reserved.</p>
+          <p>
+            <a href="index.html">Portfolio</a> ·
+            <a href="index.html#contact">Contact</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Same behaviour module as the portfolio: header state, reveals, year.
+         Every function returns early when its element is absent. -->
+    <script defer src="assets/main.js"></script>
+  </body>
+</html>

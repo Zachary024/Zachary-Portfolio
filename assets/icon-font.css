@@ -1,0 +1,47 @@
+/* ==========================================================================
+   icon-font.css — Remix Icon 4.6.0, subset to the 17 glyphs this page uses
+   --------------------------------------------------------------------------
+   The original remixicon.css is 130 KB and the font 177 KB. Only the icons
+   below ship, so the font is 2 KB and there is no third-party request.
+   Generated with fontTools pyftsubset; regenerate with the workflow in
+   README §4 if you add an icon.
+   ========================================================================== */
+
+@font-face {
+  font-family: "remixicon";
+  src: url("fonts/remix-subset.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block; /* icons are load-bearing, not decorative text */
+}
+
+[class*=" ri-"],
+[class^="ri-"] {
+  font-family: "remixicon" !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glyphs in use. Add a line here (and re-subset) when you add an icon. */
+.ri-menu-line:before{content:"\ef3e"}
+.ri-close-line:before{content:"\eb99"}
+.ri-arrow-right-line:before{content:"\ea6c"}
+.ri-github-fill:before{content:"\edca"}
+.ri-external-link-line:before{content:"\ecaf"}
+.ri-download-2-line:before{content:"\ec54"}
+.ri-layout-4-line:before{content:"\ee83"}
+.ri-code-s-slash-line:before{content:"\ebad"}
+.ri-device-line:before{content:"\ec2e"}
+.ri-whatsapp-line:before{content:"\f2bc"}
+.ri-messenger-line:before{content:"\ef4a"}
+.ri-telegram-line:before{content:"\f1f0"}
+.ri-send-plane-line:before{content:"\f0da"}
+.ri-linkedin-fill:before{content:"\eeb5"}
+.ri-twitter-x-fill:before{content:"\f3e6"}
+.ri-instagram-line:before{content:"\ee66"}
+.ri-zoom-in-line:before{content:"\f2db"}
+.ri-arrow-left-line:before{content:"\ea60"}
+.ri-arrow-up-line:before{content:"\ea76"}

@@ -1,0 +1,31 @@
+# Netlify configuration. Vercel ignores this file — the same headers can be
+# set in vercel.json if you deploy there instead.
+
+[build]
+  publish = "."
+
+# HTML must revalidate, or a visitor can keep an old page for a week.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Assets are stable but not fingerprinted, so cache hard for a week rather
+# than forever. Rename a file if you need to bust the cache immediately.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#0B0D12" />
+    <title>Page not found — Zachary Programming</title>
+    <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/icon-font.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <style>
+      /* One-off layout for this page; everything else comes from styles.css. */
+      .notfound {
+        display: grid;
+        align-content: center;
+        min-height: 100vh;
+        min-height: 100svh;
+        padding-block: var(--s-8);
+      }
+
+      .notfound__inner {
+        max-width: 34rem;
+      }
+
+      .notfound__code {
+        display: flex;
+        width: max-content;
+        align-items: center;
+        gap: var(--s-2);
+        margin-top: var(--s-8);
+        margin-bottom: var(--s-5);
+        padding: 0.375rem 0.75rem;
+        border: 1px solid var(--border);
+        border-radius: var(--r-pill);
+        background: var(--surface);
+        font-size: var(--fs-xs);
+        font-weight: 500;
+        letter-spacing: var(--tracking-label);
+        color: var(--text-2);
+      }
+
+      .notfound__code::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--cyan);
+      }
+
+      .notfound__title {
+        font-size: var(--fs-h2);
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: var(--tracking-h2);
+      }
+
+      .notfound__text {
+        margin-top: var(--s-4);
+        max-width: 44ch;
+        color: var(--text-2);
+      }
+
+      .notfound__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--s-3);
+        margin-top: var(--s-6);
+      }
+
+      .notfound__foot {
+        margin-top: var(--s-8);
+        padding-top: var(--s-5);
+        border-top: 1px solid var(--border);
+        font-size: var(--fs-xs);
+        color: var(--text-3);
+      }
+
+      .notfound__foot a {
+        color: var(--text-2);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .notfound__foot a:hover {
+        color: var(--text);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="notfound">
+      <div class="container">
+        <div class="notfound__inner">
+          <a class="brand" href="index.html" aria-label="Zachary Programming — home">
+            <img
+              class="brand__mark"
+              src="assets/img/logo-mark.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            <span class="brand__text">
+              <span class="brand__name">Zachary</span>
+              <span class="brand__sub">Programming</span>
+            </span>
+          </a>
+
+          <p class="notfound__code">Error 404</p>
+
+          <h1 class="notfound__title">This page doesn't exist.</h1>
+
+          <p class="notfound__text">
+            The link may be out of date, or the address may have a typo. Nothing
+            is broken — head back and pick up where you were.
+          </p>
+
+          <div class="notfound__actions">
+            <a class="btn btn--primary" href="index.html">
+              Back to home
+              <i class="ri-arrow-right-line" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn--ghost" href="index.html#work">See the work</a>
+          </div>
+
+          <p class="notfound__foot">
+            Or email
+            <a href="mailto:xharkrii024@gmail.com">xharkrii024@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
